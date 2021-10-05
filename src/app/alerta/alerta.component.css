@@ -1,0 +1,58 @@
+:root{
+  --main-color:#000;
+  --border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+    --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%;
+    --border:.20rem solid var(--main-color);
+    --border-hover:.20rem dashed var(--main-color);
+}
+
+.container{
+  background: #cccc;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items:  center;
+  justify-content: space-evenly;
+}
+
+.container .alerta{
+  background: #ffff00;
+  width: 300px;
+  height: 300px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  animation: pisca .5s linear infinite;
+}
+
+@keyframes pisca {
+
+  0%{
+    background: red;
+    transform: scale(.9);
+    transform: translateY(0rem);
+    border-radius: var(--border-radius-hover);
+  }
+
+  40%{
+    background: rebeccapurple;
+    transform: scale(.6);
+    transform: translateY(-2rem);
+    border-radius: var(--border-radius);
+  }
+
+  80%{
+    background: blue;
+    transform: scale(.8);
+    transform: translateY(-6rem);
+  }
+
+  100%{
+    background:crimson;
+    transform: scale(.9);
+    transform: translateY(3rem);
+    border-radius: var(--border-radius-hover);
+  }
+
+
+
+}
